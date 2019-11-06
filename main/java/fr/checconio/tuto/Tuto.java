@@ -1,6 +1,7 @@
 package fr.checconio.tuto;
 
 import fr.checconio.tuto.init.BlocksMod;
+import fr.checconio.tuto.init.ItemsMod;
 import fr.checconio.tuto.proxy.ServerProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -19,6 +20,7 @@ public class Tuto
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		BlocksMod.init();
+		ItemsMod.init();
 	}
 	
 	@EventHandler
