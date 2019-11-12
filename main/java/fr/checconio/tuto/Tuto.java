@@ -2,6 +2,7 @@ package fr.checconio.tuto;
 
 import fr.checconio.tuto.init.BlocksMod;
 import fr.checconio.tuto.init.ItemsMod;
+import fr.checconio.tuto.init.RecipesMod;
 import fr.checconio.tuto.proxy.ServerProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -21,6 +22,7 @@ public class Tuto
 	{
 		BlocksMod.init();
 		ItemsMod.init();
+		RecipesMod.init();
 	}
 	
 	@EventHandler
