@@ -3,6 +3,7 @@ package fr.checconio.tuto;
 import fr.checconio.tuto.init.BlocksMod;
 import fr.checconio.tuto.init.ItemsMod;
 import fr.checconio.tuto.init.RecipesMod;
+import fr.checconio.tuto.init.WorldGenMod;
 import fr.checconio.tuto.proxy.ServerProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -10,6 +11,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = References.MODID, name = References.NAME, version = References.VERSION, acceptedMinecraftVersions = References.MINECRAFT_VERSION)
 public class Tuto
@@ -29,6 +31,7 @@ public class Tuto
 	public void init(FMLInitializationEvent event)
 	{
 		proxy.register();
+		GameRegistry.registerWorldGenerator(new WorldGenMod(), 0);
 	}
 	
 	@EventHandler
